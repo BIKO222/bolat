@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Айтмолда Болат</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppisn:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '#image-slider' ).mount();
+  } );
+</script>
+</head>
+<body>
+    <header>
+        <h1>Айтмолда Болат</h1>
+        
+        <p>Фотограф </p>
+        <div class="navbar">
+            <ul>
+            <li><a href="#Home">Домой</a></li>
+            <li><a href="#About">Информация</a></li>
+            <li><a href="#Contact">Данные</a></li>
+            <li><a href="#Photo">Фото</a></li>
+            </ul>
+        </div>
+    </header><section id="Home">
+      <div class="section-content">
+          <h2>Добро пожаловать!</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel magna at justo fermentum mattis.</p>
+      </div>
+  </section>
+  <section id="About">
+      <div class="section-content">
+          <h2>Обо мне</h2>
+          <div class="about-info">
+              <div class="skills">
+                  <h1>Мои навыки:</h1>
+                  <div class="skill">
+                      <p>Фотография</p>
+                      <div class="level">99%</div>
+                  </div>
+                  <div class="skill">
+                      <p>Веб-дизайн</p>
+                      <div class="level">70%</div>
+                  </div>
+                  <div class="skill">
+                      <p>Photoshop</p>
+                      <div class="level">60%</div>
+                  </div>
+              </div>
+              <div class="stats">
+                  <div class="stat">
+                      <span class="number">11+</span>
+                      <p>Партнеров</p>
+                  </div>
+                  <div class="stat">
+                      <span class="number">55+</span>
+                      <p>Завершенных проектов</p>
+                  </div>
+                  <div class="stat">
+                      <span class="number">89+</span>
+                      <p>Довольных клиентов</p>
+                  </div>
+                  <div class="stat">
+                      <span class="number">150+</span>
+                      <p>Встреч</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section id="Contact">
+      <div class="section-content">
+          <h2>Контакты</h2>
+          <div class="contact-info">
+              <p><i class="fa fa-map-marker fa-fw"></i> Almaty, Kazakhstan</p>
+              <p><i class="fa fa-phone fa-fw"></i> Phone: +7 777 777 7777</p>
+              <p><i class="fa fa-envelope fa-fw"></i> Email: mail@mail.com</p>
+          </div>
+      </div>
+  </section>
+    <div id="Photo">
+        <h1>Фото</h1>
+        
+    <div class="slider">
+      <div class="slide">
+        <img src="https://massaget.kz/userdata/u102479/2024-02/resize/ae3fedfaf8f2b28d525c00f1f04dbeb6.jpg" alt="demo image" />
+      </div>
+      <div class="slide">
+        <img src="https://massaget.kz/userdata/u102357/2024-03/resize/4bf56f0f4a67db5503d454eb119e1a3d.jpg" alt="demo image" />
+      </div>
+      <div class="slide">
+          <img src="https://massaget.kz/userdata/u65244/2024-02/resize/ae9ae19412861af00fea1bd3e02b400a.jpg" alt="demo image" />
+        </div>
+        <div class="slide">
+          <img src="https://massaget.kz/userdata/u102357/2024-02/resize/d2567f735c263d2a987c68993592ed76.jpg" alt="demo image" />
+        </div>
+      <a class="prev" onclick="prevSlide()">&lt;</a>
+      <a class="next" onclick="nextSlide()">&gt;</a>
+    </div>
+    <script>
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+slides.forEach((slide, i) => {
+  const slideWidth = slide.clientWidth;
+  slide.style.transform = `translateX(-${index * slideWidth}px)`;
+});
+}
+
+function nextSlide() {
+currentSlide = (currentSlide + 1) % slides.length;
+showSlide(currentSlide);
+}
+
+function prevSlide() {
+currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+
+    </script>
+    </div>
+</body>
+</html>
